@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+.toolBar {
+  display: flex;
+  justify-content: space-between;
+
+  &__rightBar {
+    display: flex;
+
+    &__dropdown {
+      padding-top: 3px;
+      padding-right: 5px;
+    }
+  }
+
+}
+
+table {
+  width: 100%;
+  border: 1px solid #666;
+  border-collapse: collapse;
+
+  tbody {
+
+    tr {
+
+      td {
+        vertical-align: middle !important;
+
+        .btn-success {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.tableBottom {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .page__item--clicked {
+    background-color: lightblue;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+
+//錯誤訊息
+.errInput {
+  color: red;
+}
+
+
+@media (max-width: 992px) {
+  .tableMobile {
+    min-width: 100%;
+  }
+
+  .tableHide {
+    display: none !important;
+  }
+
+  .tableMobile tr {
+    display: block;
+    border: 1px solid black;
+    margin-top: 10px;
+  }
+
+  .tableMobile td {
+    text-align: left;
+    font-size: 15px;
+    width: 100%;
+    display: block;
+  }
+
+  .tableMobile td::before {
+    content: attr(data-th)":";
+    font-weight: bold;
+    display: block;
+  }
+
+  .table,
+  .table-bordered td {
+    border: 0 !important;
+  }
+
+  .tableBottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
